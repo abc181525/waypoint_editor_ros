@@ -48,31 +48,27 @@ The ROS package of waypoint editing tool
 ## Install and Build
 ```
 # clone repository
-cd /path/to/your/catkin_ws/src
-git clone https://github.com/ToshikiNakamura0412/waypoint_editor_ros.git
+cd ~/catkin_ws/src
+git clone https://github.com/abc181525/waypoint_editor_ros.git
 
 # build
-cd /path/to/your/catkin_ws
-rosdep install -riy --from-paths src --rosdistro noetic # Install dependencies
-catkin build waypoint_editor_ros
+cd ~/catkin_ws
+catkin_make
 ```
 
 ## How to use
 ```
 roslaunch waypoint_editor_ros waypoint_editor.launch
+roslaunch waypoint_editor_ros waypoint_manager.launch
+
+sudo apt-get install ros-noetic-topic-tools
+rosrun topic_tools relay /waypoint_manager/global_goal /move_base_simple/goal
+
+rostopic pub /finish_flag std_msgs/Bool "data: true"
 ```
 
 ## Running the demo
 ```
-# clone repository
-cd /path/to/your/catkin_ws/src
-git clone https://github.com/ToshikiNakamura0412/waypoint_manager_ros.git
-
-# build
-cd /path/to/your/catkin_ws
-rosdep install -riy --from-paths src --rosdistro noetic
-catkin build waypoint_manager_ros
-
 # run demo
 roslaunch waypoint_editor_ros test.launch
 ```
@@ -102,3 +98,4 @@ roslaunch waypoint_editor_ros test.launch
 #### Subscribed Topics
 - /move_base_simple/goal (`geometry_msgs/PoseStamped`)
  - The goal pose
+

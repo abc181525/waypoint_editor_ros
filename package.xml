@@ -12,6 +12,7 @@
   <depend>std_msgs</depend>
   <depend>std_srvs</depend>
   <depend>tf</depend>
+  <depend>visualization_msgs</depend>
 
   <exec_depend>roslaunch</exec_depend>
   <exec_depend>rospy</exec_depend>

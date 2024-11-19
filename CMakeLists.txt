@@ -8,6 +8,7 @@ find_package(catkin REQUIRED COMPONENTS
   std_srvs
   tf
   message_generation
+  visualization_msgs
 )
 
 add_service_files(

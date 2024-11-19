@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <launch>
-    <arg name="output" default="log" doc="screen or log"/>
-    <arg name="waypoint_file" default="$(find waypoint_editor_ros)/launch/waypoints.yaml"/>
+    <arg name="output" default="screen" doc="screen or log"/>
+    <arg name="waypoint_file" default="$(find waypoint_editor_ros)/config/waypoints.yaml"/>
     <node pkg="waypoint_editor_ros" type="waypoint_editor_node.py" name="waypoint_editor" output="$(arg output)">
         <param name="waypoint_file" value="$(arg waypoint_file)"/>
     </node>
