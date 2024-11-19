@@ -244,6 +244,10 @@ class WaypointManager:
                     0, 0, self._waypoints[self._update_count]["yaw"]
                 )
             )
+            ### pub goal once
+            self._goal_pose.header.stamp = rospy.Time.now()
+            self._goal_pose_pub.publish(self._goal_pose)
+
             return True
         else:
             return False
@@ -257,14 +261,14 @@ class WaypointManager:
         Returns:
             None
         """
-
+       
         r = rospy.Rate(self._params.hz)
         while not rospy.is_shutdown():
             self._waypoints = self._load_waypoints(self._params.waypoint_file)
             msg: MarkerArray = self._create_visualization(self._waypoints)
             self._waypoint_pub.publish(msg)
-            self._goal_pose.header.stamp = rospy.Time.now()
-            self._goal_pose_pub.publish(self._goal_pose)
+            # self._goal_pose.header.stamp = rospy.Time.now()
+            # self._goal_pose_pub.publish(self._goal_pose)
             r.sleep()
 
     def _create_visualization(self, waypoints) -> MarkerArray:
