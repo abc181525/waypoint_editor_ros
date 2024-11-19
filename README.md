@@ -67,19 +67,6 @@ rosrun topic_tools relay /waypoint_manager/global_goal /move_base_simple/goal
 rostopic pub /finish_flag std_msgs/Bool "data: true"
 ```
 
-## Running the demo
-```
-# run demo
-roslaunch waypoint_editor_ros test.launch
-```
-
-<p align="center">
-  <img src="https://github.com/ToshikiNakamura0412/amr_navigation_gifs/blob/master/images/waypoint_editor_demo.gif" height="320px"/>
-</p>
-
-## Node I/O
-![Node I/O](images/node_io.png)
-
 ## Nodes
 ### waypoint_editor
 #### Service Topics
