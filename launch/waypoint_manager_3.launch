@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <launch>
     <arg name="output" default="screen" doc="[screen, log]"/>
-    <arg name="waypoint_file" default="$(find waypoint_editor_ros)/config/waypoints.yaml"/>
+    <arg name="waypoint_file" default="$(find waypoint_editor_ros)/config/waypoints_3.yaml"/>
     <arg name="start" default="0"/>
     <arg name="width_ratio" default="0.4"/>
     <arg name="is_visible_text" default="true"/>
