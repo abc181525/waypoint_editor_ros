@@ -1,13 +1,13 @@
 <?xml version="1.0"?>
 <launch>
     <arg name="output" default="screen" doc="[screen, log]"/>
-    <arg name="waypoint_file" default="$(find waypoint_editor_ros)/config/waypoints.yaml"/>
+    <arg name="waypoint_file" default="$(find waypoint_editor_ros)/config/03_tmparea1_2_tmparea3.yaml"/>
     <arg name="start" default="0"/>
     <arg name="width_ratio" default="0.4"/>
     <arg name="is_visible_text" default="true"/>
     <arg name="is_visible_edge" default="true"/>
 
-    <node pkg="waypoint_editor_ros" type="waypoint_manager_node.py" name="waypoint_manager" output="$(arg output)">
+    <node pkg="waypoint_editor_ros" type="waypoint_manager_node_v2.py" name="waypoint_manager" output="$(arg output)">
         <param name="waypoint_file" value="$(arg waypoint_file)"/>
         <param name="start" value="$(arg start)"/>
         <param name="width_ratio" value="$(arg width_ratio)"/>
