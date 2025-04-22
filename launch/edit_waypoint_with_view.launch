@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <launch>
-    <arg name="waypoint_file" default="$(find waypoint_editor_ros)/config/05_pallet27_2_charge.yaml"/>
+    <arg name="waypoint_file" default="$(find waypoint_editor_ros)/config/05_pallet32_2_charge.yaml"/>
 
     <include file="$(find waypoint_editor_ros)/launch/waypoint_editor.launch">
         <arg name="output" value="screen"/>

@@ -77,30 +77,6 @@ Visualization Manager:
       Frame Timeout: 15
       Frames:
         All Enabled: false
-        base_link:
-          Value: false
-        base_scan_2d:
-          Value: false
-        body:
-          Value: false
-        body_foot:
-          Value: true
-        camera_init:
-          Value: false
-        imu_link:
-          Value: false
-        map:
-          Value: true
-        robot_foot_init:
-          Value: false
-        scan_2d_f:
-          Value: false
-        scan_2d_l:
-          Value: false
-        scan_2d_r:
-          Value: false
-        world:
-          Value: false
       Marker Alpha: 1
       Marker Scale: 5
       Name: TF
@@ -108,24 +84,7 @@ Visualization Manager:
       Show Axes: true
       Show Names: true
       Tree:
-        base_link:
-          base_scan_2d:
-            scan_2d_f:
-              {}
-            scan_2d_l:
-              {}
-            scan_2d_r:
-              {}
-        map:
-          camera_init:
-            body:
-              body_foot:
-                {}
-            robot_foot_init:
-              {}
-        world:
-          imu_link:
-            {}
+        {}
       Update Interval: 0
       Value: true
   Enabled: true
@@ -155,7 +114,7 @@ Visualization Manager:
   Value: true
   Views:
     Current:
-      Angle: -0.004999973811209202
+      Angle: -1.5749998092651367
       Class: rviz/TopDownOrtho
       Enable Stereo Rendering:
         Stereo Eye Separation: 0.05999999865889549
@@ -165,10 +124,10 @@ Visualization Manager:
       Invert Z Axis: false
       Name: Current View
       Near Clip Distance: 0.009999999776482582
-      Scale: 15.47940444946289
+      Scale: 10.406867980957031
       Target Frame: <Fixed Frame>
-      X: 26.630807876586914
-      Y: -14.059760093688965
+      X: 1.9962843656539917
+      Y: -30.609472274780273
     Saved: ~
 Window Geometry:
   Displays:
